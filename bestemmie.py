@@ -7,16 +7,23 @@ stranger = "jkwxy"
 
 def core():
 
-    choose = input("1.shell 2.file")
+
+    print("Modalità di scrittura:")
+    print("1.Sulla shell")
+    print("2.In un file di testo")
+    choose = input("Scelta --> ")
+    print("")
+    print("Inserire il numero di bestemmie da generare:")
+    number = int(input("--> "))
 
     if (choose == "1"):
-        for i in range(1, 101):
+        for i in range(0, number):
             msg = "Dio " + wordGen()
             print(msg)    
     elif (choose == "2"):
         print("Attendi...")
         text = open("bestemmie.txt", "w")
-        for i in range(1, 10**4):
+        for i in range(0, number):
             msg = "Dio " + wordGen()
             text.write(msg + "\n")
         print("Go finì!")
